@@ -1,9 +1,9 @@
 @import "./sizes.less";
 
 .main {
-    background-color: #3B181E;
-    padding: 100px 15px;
+    margin-bottom: 100px;
 }
+
 .catalog {
     display: flex;
     flex-direction: column;
@@ -144,9 +144,71 @@
 }
 .control:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all 0.5s ease;
 }
+.stock {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+}
+.stock-img {
+    width: 288px;
+    height: 170px;
+}
+.stock-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 288px;
+}
+.stock-inner-heading {
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 150px;
+}
+.stock-inner-underline {
+    width: 85.5px;
+    height: 0.5px;
+    background-color: #FFFFFF;;
+}
+.stock-inner-text {
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 170%;
+    color: #FFFFFF;
+}
+.stock-inner-button {
+    width: 220px;
+    padding: 15px 30px;
+    background: #010001;
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+}
+.stock-inner-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
 
 
 @media (min-width:@for-heading) {
@@ -178,23 +240,52 @@
     .control-medium {
         display: flex;
     }
+    .stock-inner {
+        align-items: center;
+        width: 453px;
+    }
+    .stock-img {
+        width: 453px;
+        height: 323px;
+    }
+    .stock-inner-heading {
+        width: auto;
+        font-size: 30px;
+        line-height: 170%;
+    }
 }
 
 @media (min-width:@large) {
     .main {
-        padding: 150px 15px;
+        margin-bottom: 150px;
     }
+    .stock-img {
+        width: 697px;
+        height: 410px;
+    }
+    .stock-inner-text {
+        font-size: 18px;
+    }
+    
 }
 
 @media (min-width:@xl) {
     .catalog-inner {
-        width: 1500px;
+        width: 1375px;
     }
     .underline {
         margin-bottom: 100px;
     }
     .control-medium {
         display: none;
+    }
+    .stock {
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 150px;
+    }
+    .stock-inner {
+        align-items: flex-start;
     } 
 }
 
