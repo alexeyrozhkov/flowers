@@ -1,0 +1,200 @@
+@import "./sizes.less";
+
+.main {
+    background-color: #3B181E;
+    padding: 100px 15px;
+}
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog-heading {
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    align-self: start;
+
+}
+.underline {
+    display: none;
+    width: 85.5px;
+    height: 0.5px;
+    background-color: white;
+}
+.catalog-inner {
+    width: 288px;
+    overflow: hidden;
+}
+.innner-lists {
+    display: flex;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.5s ease;
+}
+.inner-list {
+    margin-right: 15px;
+}
+.inner-list:last-child {
+    margin: 0;
+}
+.inner-list:hover {
+    cursor: pointer;
+}
+.list-item {
+    padding: 15px 20px;
+    width: 288px;
+    height: 392px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.first {
+    background-image: url('../../assets/flowers2.jpg');
+
+}
+.second {
+    background-image: url('../../assets/img-flowers2.jpg');
+}
+.third {
+    background-image: url('../../assets/img-flower3.jpg');
+}
+.fourth {
+    background-image: url("../../assets/img-flower4.png");
+}
+.list-item-heading {
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.left::before {
+    content: "_________";
+   
+}
+.right::after {
+    content: "_________";
+}
+.list-item-text {
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.9;
+    align-self: flex-end;
+}
+.list-item-button {
+    display: none;
+    padding: 15px 30px;
+    width: 199px;
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #010001;
+    background: #FFFFFF;
+    transition: all 0.5s ease;
+}
+.list-item-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+.inner-list-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+    margin-top: 20px;
+    .control {
+        width: 60px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        transition: all 0.5s ease;
+    }
+    .selected {
+        background: #FFFFFF;
+    }
+}
+.control-medium {
+    display: none;
+    width: 137px;
+}
+.control:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+
+@media (min-width:@for-heading) {
+    .catalog-heading {
+        align-self: center;
+    }
+}    
+
+@media (min-width:@medium) {
+    .catalog-heading {
+        font-size: 30px;
+        line-height: 33px;
+    }
+    .underline {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .catalog-inner {
+        width: 680px;
+    }
+    
+    .list-item {
+        width: 330px;
+        height: 450px
+    } 
+    .control-mobile {
+        display: none;
+    }
+    .control-medium {
+        display: flex;
+    }
+}
+
+@media (min-width:@large) {
+    .main {
+        padding: 150px 15px;
+    }
+}
+
+@media (min-width:@xl) {
+    .catalog-inner {
+        width: 1500px;
+    }
+    .underline {
+        margin-bottom: 100px;
+    }
+    .control-medium {
+        display: none;
+    } 
+}
+
