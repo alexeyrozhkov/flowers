@@ -1,10 +1,12 @@
 const gulp = require('gulp');
 const browserSync  = require('browser-sync').create();
 const less = require('gulp-less');
+const concatCss = require('gulp-concat-css');
 
 gulp.task('less', gulp.series(function () {
-    return gulp.src('dev/less/main.less')
+    return gulp.src('dev/less/index.less')
     .pipe(less())
+    .pipe(concatCss("main.css"))
     .pipe(gulp.dest('build/css'));
 }));
 
@@ -13,7 +15,7 @@ gulp.task('build', gulp.series('less'));
 gulp.task('default', gulp.series(function() {
     browserSync.init({
         server: { baseDir: './' },
-        startPath: 'main.html'
+        // startPath: 'index.html'
     });
     const html = gulp.watch('*.html');
     html.on('change', function() {
