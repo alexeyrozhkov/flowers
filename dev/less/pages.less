@@ -1,0 +1,58 @@
+@import './sizes.less';
+
+.main-page {
+    position: relative;
+}
+
+.header-page {
+    background-color: #3B181E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+.welcome-picture {
+    width: 100%;
+    height: 443px;
+}
+
+.party {
+    background-image: url('../../assets/event-m.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+@media (min-width:@medium) {
+    .welcome-picture {
+        height: 518px;
+    }
+    .party {
+        background-image: url('../../assets/map-case.png');
+    }
+}
+@media (min-width:@large) {
+   .party {
+       background-image: url('../../assets/event-dt.jpg');
+   }
+}
+
+@media (min-width:@xl) {
+    .header-page {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.0);
+        width: 90%;
+        top: 87px;
+        left: 95px;
+        z-index: 100;
+    }
+    .welcome-picture {
+        width: 1086px;
+        height: 1086px;
+
+    }
+    
+}
+
