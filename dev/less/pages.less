@@ -23,8 +23,6 @@
     background-size: cover;
 }
 
-
-
 @media (min-width:@medium) {
     .welcome-picture {
         height: 518px;
@@ -43,10 +41,13 @@
     .header-page {
         position: absolute;
         background: rgba(0, 0, 0, 0.0);
-        width: 90%;
-        top: 87px;
-        left: 95px;
+        width: 100%;
+        padding-top: 87px;
+        padding-left: 95px;
+        top: 0;
+        left: 0;
         z-index: 100;
+        box-sizing: border-box;
     }
     .welcome-picture {
         width: 1086px;
