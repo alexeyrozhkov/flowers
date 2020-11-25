@@ -28,6 +28,7 @@
     background-color: #3B181E; 
     padding: 30px 16px 30px;
     box-sizing: border-box;
+    position: relative;
 }
 .page-inner-description {
     max-width: 600px;
@@ -67,11 +68,21 @@
     background: rgba(0, 0, 0, 0.0);
     border: 2px solid #FFFFFF;
     margin-top: 30px;
+    transition: all 0.3s ease;
+}
+.description-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+.portfolio-wrapper {
+    position: relative;
 }
 .portfolio-photos {
     width: 250px;
     overflow: hidden;
     margin-top: 50px;
+    position: relative;   
 }
 .photos-lists {
     width: 9999px;
@@ -90,6 +101,55 @@
 .photo-list-img {
     width: 75px;
     height: 75px;
+}
+.portfolio-button {
+    display: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.portfolio-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+.arrow-left {
+     top: 105px;
+    left: -60px;
+}
+.arrow-right {
+    top: 105px;
+    right: -50px
+}
+.link-profile {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+.link-profile-text {
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.link-profile-text:hover {
+    text-decoration: underline;
+}
+.link-profile-social {
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    transition: all 0.5s ease;
+}
+.link-profile-social:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
 }
 
 @media (min-width:@medium) {
@@ -120,6 +180,9 @@
     .photo-list-img {
         width: 145px;
         height: 145px;
+    }
+    .portfolio-button {
+        display: block;
     }
 }
 @media (min-width:@large) {
@@ -171,6 +234,15 @@
     }
     .footer-page-wrapper {
         display: none;
+    }
+    .arrow-left {
+        top:80px;
+    }
+    .arrow-right {
+        top: 80px;
+    }
+    .link-profile {
+        display: flex;
     }
 }    
 
