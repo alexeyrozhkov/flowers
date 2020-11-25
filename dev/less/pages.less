@@ -2,8 +2,8 @@
 
 .main-page {
     position: relative;
+    background-color: #3B181E;
 }
-
 .header-page {
     background-color: #3B181E;
     display: flex;
@@ -22,6 +22,75 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.page-inner {
+    display: flex;
+    flex-direction: column;
+    background-color: #3B181E; 
+    padding: 30px 16px 30px;
+    box-sizing: border-box;
+}
+.page-inner-description {
+    max-width: 600px;
+}
+.description-heading {
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.description-text {
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-top: 30px;
+    
+}
+.description-button {
+    width: 119px;
+    padding: 15px 30px;
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.0);
+    border: 2px solid #FFFFFF;
+    margin-top: 30px;
+}
+.portfolio-photos {
+    width: 250px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.photos-lists {
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.5s ease;
+    display: flex;
+}
+.photos-list {
+    margin-right: 10px;
+}
+.photos-list:last-child {
+    margin-right: 0;
+}
+.photo-list-img {
+    width: 75px;
+    height: 75px;
+}
 
 @media (min-width:@medium) {
     .welcome-picture {
@@ -29,6 +98,28 @@
     }
     .party {
         background-image: url('../../assets/map-case.png');
+    }
+    .page-inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .description-heading {
+        font-size: 40px;
+        line-height: 44px;
+    }
+    .description-text {
+        font-size: 20px;
+        line-height: 120%;
+    }
+    .description-button {
+        width: 170px;
+    }
+    .portfolio-photos {
+        width: 620px;
+    }
+    .photo-list-img {
+        width: 145px;
+        height: 145px;
     }
 }
 @media (min-width:@large) {
@@ -38,6 +129,9 @@
 }
 
 @media (min-width:@xl) {
+    .main-page {
+        display: flex;
+    }
     .header-page {
         position: absolute;
         background: rgba(0, 0, 0, 0.0);
@@ -50,10 +144,34 @@
         box-sizing: border-box;
     }
     .welcome-picture {
-        width: 1086px;
+        width: 50%;
         height: 1086px;
 
     }
-    
-}
+    .page-inner {
+        padding: 0px 245px 0px 84px;
+        width: 50%;
+
+    }
+    .description-heading {
+        margin-top: 250px;
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .page-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .portfolio-photos {
+        width: 530px;
+    }
+    .photo-list-img {
+        width: 123px;
+        height: 123px;
+    }
+    .footer-page-wrapper {
+        display: none;
+    }
+}    
+
 
