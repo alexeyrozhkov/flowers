@@ -1,0 +1,131 @@
+@import './variables.less';
+
+.overlay--opened {
+    background: @bg-primary;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: none;
+    background-color: #3B181E;
+    margin-top: 75px;
+    padding-bottom: 60px;
+    height: 550px;
+    position: relative;
+    transition: all 0.5s ease;
+    
+}
+.menu--opened {
+    display: block;
+}
+.menu-heading {
+    text-align: center;
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    
+}
+.menu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.menu-link {
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.menu-link a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+.burger-absolute {
+    position: absolute;
+    right: 25px;
+    top: 25px
+}
+.logo-menu {
+    margin: auto;
+    margin-top: 25px;
+}
+.top-rotate {
+    transform: rotate(-45deg) translate(0px, 5px);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.7s;
+}
+.bottom-rotate {
+    transform: rotate(45deg) translate(0px, -5px);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.7s   
+}
+.header-background-event {
+    background-color: #3B181E;
+}
+.menu-buttons {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 95px;
+    left: 95px;
+}
+.menu-button {
+    border:none;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: all 0.5s ease;
+    margin-bottom: 30px;
+}
+.menu-button:last-child {
+    margin-bottom: 0;
+}
+.menu-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+@media (min-width:@medium) {
+    .menu-heading {
+        font-size: 45px;
+        line-height: 50px
+    }
+    .logo-menu {
+        margin-top: 110px;
+    }
+}
+
+@media (min-width:@large) {
+    .menu-link {
+        font-size: 35px;
+        line-height: 39px;
+    }
+}
+@media (min-width:@xl) {
+    .menu {
+        height: 850px;
+    }
+    .menu-buttons {
+        display: flex;
+    }
+    .menu-link {
+        margin-top: 100px;
+    }
+}
