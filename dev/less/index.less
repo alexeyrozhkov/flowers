@@ -5,10 +5,15 @@
 @import '../less/menu.less';
 @import '../less/welcome.less';
 @import '../less/popup.less';
+@import '../less/variables.less';
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-    background-color: #3B181E;
+    background-color: @bg-primary;
 }
 
 .not-overflow {

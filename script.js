@@ -1,4 +1,4 @@
-const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenu = document.querySelector('.burger-wrapper');
 const burgerMenuTop = burgerMenu.querySelector('.top');
 const burgerMenuBottom = burgerMenu.querySelector('.bottom')
 const burgerTitle = document.querySelector('.burger-title');
@@ -10,39 +10,49 @@ const logo = overlay.querySelector('.logo');
 const popup = document.querySelector('.popup');
 const buttonOrder = document.querySelector('.order');
 
+const overlayColoredOpenedClass = 'overlay-colored--opened';
+const menuOpenedClass = 'menu--opened';
+const logoMenuOpenedClass = 'logo-menu--opened';
+const burgerOpenedClass = 'burger--opened';
+const topRotateClass = 'top-rotate';
+const bottomRotateClass = 'bottom-rotate';
+const burgerTitleHiddenClass = 'burger-title-hidden';
+
+const overlayOpenedClass = 'overlay--opened';
+const overlayClosedClass = 'overlay--closed';
 
 function overlayHidden() {
-    overlay.classList.remove('overlay-colored--opened');
-    menuOverlay.classList.remove('menu--opened');
-    logo.classList.remove('logo-menu--opened');
-    burgerMenu.classList.remove('burger--opened');
-    burgerMenuTop.classList.remove('top-rotate');
-    burgerMenuBottom.classList.remove('bottom-rotate');
-    burgerTitle.classList.remove('burger-title-hidden');
+    overlay.classList.remove(overlayColoredOpenedClass);
+    menuOverlay.classList.remove(menuOpenedClass);
+    logo.classList.remove(logoMenuOpenedClass);
+    burgerMenu.classList.remove(burgerOpenedClass);
+    burgerMenuTop.classList.remove(topRotateClass);
+    burgerMenuBottom.classList.remove(bottomRotateClass);
+    burgerTitle.classList.remove(burgerTitleHiddenClass);
 }
 
 function showOverlay() {
-    overlay.classList.add('overlay-colored--opened');
-    menuOverlay.classList.add('menu--opened');
-    logo.classList.add('logo-menu--opened');
-    burgerMenu.classList.add('burger--opened');
-    burgerMenuTop.classList.add('top-rotate');
-    burgerMenuBottom.classList.add('bottom-rotate');
-    burgerTitle.classList.add('burger-title-hidden');
+    overlay.classList.add(overlayColoredOpenedClass);
+    menuOverlay.classList.add(menuOpenedClass);
+    logo.classList.add(logoMenuOpenedClass);
+    burgerMenu.classList.add(burgerOpenedClass);
+    burgerMenuTop.classList.add(topRotateClass);
+    burgerMenuBottom.classList.add(bottomRotateClass);
+    burgerTitle.classList.add(burgerTitleHiddenClass);
 }
 
 function showPopup() {
-    popup.classList.add('overlay--opened');
-    popup.classList.remove('overlay--closed');
+    popup.classList.add(overlayOpenedClass);
+    popup.classList.remove(overlayClosedClass);
 }
 function popupHidden() {
-    popup.classList.remove('overlay--opened');
-    popup.classList.add('overlay--closed');
+    popup.classList.remove(overlayOpenedClass);
+    popup.classList.add(overlayClosedClass);
 }
 
 
 burgerMenu.onclick = function() {
-    if(overlay.classList.contains('overlay-colored--opened')) {
+    if(overlay.classList.contains(overlayColoredOpenedClass)) {
        overlayHidden();
     } else {
         showOverlay();
@@ -55,7 +65,6 @@ popup.onclick = function(e) {
     const target = e.target;
     const isPopup = target.classList.contains('popup-wrapper');
     const isClosedButton = target.closest('.popup-closed');
-    console.log(target);
     if( isClosedButton || isPopup) {
         popupHidden();
     }
