@@ -5,7 +5,8 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     z-index: 100;
@@ -58,12 +59,12 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
 }
-.burger-absolute {
+.burger--opened {
     position: absolute;
     right: 25px;
     top: 25px
 }
-.logo-menu {
+.logo-menu--opened {
     margin: auto;
     margin-top: 25px;
 }
@@ -77,8 +78,8 @@
     transition-timing-function: ease-in-out;
     transition-duration: 0.7s   
 }
-.header-background-event {
-    background-color: #3B181E;
+.burger-title-hidden {
+    display: none;
 }
 .menu-buttons {
     display: none;
@@ -117,6 +118,13 @@
         font-size: 35px;
         line-height: 39px;
     }
+    .menu-heading {
+        margin-top: 150px;
+    }
+    .menu-link {
+        margin-top: 50px;
+    }
+    
 }
 @media (min-width:@xl) {
     .menu {
@@ -128,4 +136,11 @@
     .menu-link {
         margin-top: 100px;
     }
+    .menu-heading {
+        margin-top: 200px;
+    }
+    .burger--opened {
+        right: 50px;
+        top:50px;
+    } 
 }
