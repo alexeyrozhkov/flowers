@@ -1,7 +1,9 @@
 @import './variables.less';
 
+.overlay--closed {
+    display: none;
+}
 .overlay--opened {
-    background: @bg-primary;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -10,6 +12,12 @@
     top: 0;
     left: 0;
     z-index: 100;
+    display: block; 
+}
+
+.overlay-colored--opened {
+    &:extend(.overlay--opened);
+    background: @bg-primary;
 }
 
 .menu {
@@ -19,7 +27,7 @@
     padding-bottom: 60px;
     height: 550px;
     position: relative;
-    transition: all 0.5s ease;
+    
     
 }
 .menu--opened {
@@ -66,7 +74,6 @@
 }
 .logo-menu--opened {
     margin: auto;
-    margin-top: 25px;
 }
 .top-rotate {
     transform: rotate(-45deg) translate(0px, 5px);
@@ -111,6 +118,9 @@
     .logo-menu {
         margin-top: 110px;
     }
+    .logo-menu--opened {
+        margin-top: 50px;
+    }
 }
 
 @media (min-width:@large) {
@@ -124,6 +134,10 @@
     .menu-link {
         margin-top: 50px;
     }
+    .logo-menu--opened {
+        margin-top: 0;
+    }
+    
     
 }
 @media (min-width:@xl) {

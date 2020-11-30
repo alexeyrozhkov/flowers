@@ -1,0 +1,108 @@
+@import "./variables.less";
+
+.popup {
+}
+.popup-wrapper {
+    display: flex;
+    padding: 85px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    height: 100%;
+}
+
+.popup-inner {
+    background-color: @bg-primary;
+    padding: 60px 20px;
+    max-width: 465px;
+    height: 430px;
+    position: relative;
+}
+
+.popup-inner-heading {
+    text-align: center;
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    
+}
+.popup-closed {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    transition: all 0.5s ease;
+}
+.popup-closed:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+.popup-img {
+    display: none;
+}
+.popup-form {
+    text-align: center;
+    margin-top: 25px;
+}
+.input {
+    border: 1px solid rgba(246, 246, 249, 0.2);
+    box-sizing: border-box;
+    background-color: @bg-primary;
+    width: 245px;
+    padding: 10px 20px;
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.input:hover {
+    cursor: pointer;
+}
+.popup-button {
+    width: 245px;
+    padding: 15px 0;
+    text-align: center;
+    background: #FFFFFF;
+    font-family: 'Forum',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #010001;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+}
+.popup-button:hover {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+@media (min-width:@medium) {
+    .popup-inner {
+        height: 500px;
+    }
+    .popup-inner-heading {
+        margin-bottom: 60px;
+    }
+}
+@media (min-width:@xl) {
+    .popup-img {
+        display: block;
+        height: 500px;
+    }
+}

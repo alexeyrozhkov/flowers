@@ -7,10 +7,12 @@ const overlay= document.querySelector('.overlay');
 const menuOverlay = overlay.querySelector('.menu');
 const logo = overlay.querySelector('.logo');
 
+const popup = document.querySelector('.popup');
+const buttonOrder = document.querySelector('.order');
 
 
 function overlayHidden() {
-    overlay.classList.remove('overlay--opened');
+    overlay.classList.remove('overlay-colored--opened');
     menuOverlay.classList.remove('menu--opened');
     logo.classList.remove('logo-menu--opened');
     burgerMenu.classList.remove('burger--opened');
@@ -20,7 +22,7 @@ function overlayHidden() {
 }
 
 function showOverlay() {
-    overlay.classList.add('overlay--opened');
+    overlay.classList.add('overlay-colored--opened');
     menuOverlay.classList.add('menu--opened');
     logo.classList.add('logo-menu--opened');
     burgerMenu.classList.add('burger--opened');
@@ -29,12 +31,32 @@ function showOverlay() {
     burgerTitle.classList.add('burger-title-hidden');
 }
 
+function showPopup() {
+    popup.classList.add('overlay--opened');
+    popup.classList.remove('overlay--closed');
+}
+function popupHidden() {
+    popup.classList.remove('overlay--opened');
+    popup.classList.add('overlay--closed');
+}
+
 
 burgerMenu.onclick = function() {
-    if(overlay.classList.contains('overlay--opened')) {
+    if(overlay.classList.contains('overlay-colored--opened')) {
        overlayHidden();
     } else {
         showOverlay();
     }
-    
+}
+buttonOrder.onclick =  function() {
+    showPopup();
+}
+popup.onclick = function(e) {
+    const target = e.target;
+    const isPopup = target.classList.contains('popup-wrapper');
+    const isClosedButton = target.closest('.popup-closed');
+    console.log(target);
+    if( isClosedButton || isPopup) {
+        popupHidden();
+    }
 }
