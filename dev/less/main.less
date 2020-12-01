@@ -40,15 +40,6 @@
     list-style: none;
     transition: all 0.5s ease;
 }
-.inner-list {
-    margin-right: 15px;
-}
-.inner-list:last-child {
-    margin: 0;
-}
-.inner-list:hover {
-    cursor: pointer;
-}
 .list-item {
     padding: 15px 20px;
     width: 288px;
@@ -59,6 +50,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    margin-right: 15px;
+}
+.list-item:last-child {
+    margin: 0;
+}
+.list-item:hover {
+    cursor: pointer;
 }
 .first {
     background-image: url('../../assets/flowers2.jpg');
@@ -100,7 +98,6 @@
     align-self: flex-end;
 }
 .list-item-button {
-    display: none;
     padding: 15px 30px;
     width: 199px;
     font-family: 'Forum', sans-serif;
@@ -115,35 +112,21 @@
     background: #FFFFFF;
     transition: all 0.5s ease;
 }
+.button-hidden {
+    display: none;
+}
+.button--show {
+    display: block;
+}
 .list-item-button:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: all 0.5s ease;
 }
-.inner-list-controls {
-    display: flex;
-    justify-content: space-between;
-    width: 288px;
-    margin-top: 20px;
-    .control {
-        width: 60px;
-        height: 3px;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 50px;
-        transition: all 0.5s ease;
-    }
-    .selected {
-        background: #FFFFFF;
-    }
-}
-.control-medium {
+
+.controls-medium {
     display: none;
     width: 137px;
-}
-.control:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.5s ease;
 }
 .stock {
     display: flex;
@@ -229,10 +212,10 @@
         width: 330px;
         height: 450px
     } 
-    .control-mobile {
+    .controls-mobile {
         display: none;
     }
-    .control-medium {
+    .controls-medium {
         display: flex;
     }
     .stock-inner {
@@ -271,7 +254,7 @@
     .underline {
         margin-bottom: 100px;
     }
-    .control-medium {
+    .controls-medium {
         display: none;
     }
     .stock {
@@ -281,6 +264,6 @@
     }
     .stock-inner {
         align-items: flex-start;
-    } 
+    }
 }
 

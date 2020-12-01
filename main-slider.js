@@ -1,0 +1,100 @@
+function atLeastTablet() {
+    const tabletVisible = document.querySelector(".tablet-visible");
+    return !!tabletVisible.offsetWidth
+}
+
+function atLeastXl() {
+    const xlVisible = document.querySelector(".xl-visible");
+    return !!xlVisible.offsetWidth
+}
+
+const isMobile = !atLeastTablet();
+const isTabletOrDesktop = atLeastTablet() && !atLeastXl();
+const isXl = atLeastXl();
+
+function renderBrideFlowersSlide() {
+    return `<div class="list-item first">
+      <h3 class="list-item-heading left">01</h3>
+      <div class="list-item-wrapper">
+        <p class="list-item-text">букет невесты и свадебное оформление</p>
+        <button class="list-item-button button-hidden">смотреть работы</button>
+      </div>
+    </div>`;
+}
+
+function renderPartyFlowersSlide() {
+    return `<div class="list-item second">
+      <h3 class="list-item-heading right">02</h3>
+      <div class="list-item-wrapper">
+        <p class="list-item-text">букеты на торжества</p>
+        <button class="list-item-button button-hidden">смотреть работы</button>
+      </div>
+    </div>`
+} 
+
+function renderCompositionsSlide() {
+    return `<div class="list-item third">
+      <h3 class="list-item-heading right">03</h3>
+      <div class="list-item-wrapper">
+        <p class="list-item-text">композиции</p>
+        <button class="list-item-button button-hidden">смотреть работы</button>
+      </div>
+    </div>`
+}
+
+function renderActivityFlowersSlide() {
+    return `<div class="list-item fourth">
+      <h3 class="list-item-heading right">04</h3>
+      <div class="list-item-wrapper">
+        <p class="list-item-text">оформление мероприятий</p>
+        <button class="list-item-button button-hidden">смотреть работы</button>
+      </div>
+    </div>`
+}
+
+function renderMobileSlides() {
+    const sliderInner = document.querySelector(".swiper-wrapper");
+    const slides = `
+        <div class="swiper-slide">
+            ${renderBrideFlowersSlide()}
+        </div>
+        <div class="swiper-slide">
+            ${renderPartyFlowersSlide()}
+        </div>
+        <div class="swiper-slide">
+            ${renderCompositionsSlide()}
+        </div>
+        <div class="swiper-slide">
+            ${renderActivityFlowersSlide()}
+        </div>
+    `
+    sliderInner.innerHTML = slides;
+}
+
+function renderTabletAndDesktopSlides() {
+    const sliderInner = document.querySelector(".swiper-wrapper");
+    const slides = `
+        <div class="swiper-slide">
+            ${renderBrideFlowersSlide()}
+            ${renderPartyFlowersSlide()}
+        </div>
+        <div class="swiper-slide">
+            ${renderCompositionsSlide()}
+            ${renderActivityFlowersSlide()}
+        </div>
+    `
+    sliderInner.innerHTML = slides;
+}
+if (isMobile) {
+    renderMobileSlides();
+}
+if (isTabletOrDesktop) {
+    renderTabletAndDesktopSlides();
+}
+var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    }
+})

@@ -7,8 +7,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="build/css/main.css" media="">
-  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
  <div class="overlay">
@@ -57,14 +58,14 @@
       <section class="catalog" id="catalog">
         <h2 class="catalog-heading">каталог услуг</h2>
         <div class="underline"></div>
-        <div class="catalog-inner">
+        <!-- <div class="catalog-inner">
           <ul class="innner-lists" style="margin-left: 0;">
             <li class="inner-list">
               <div class="list-item first">
                 <h3 class="list-item-heading left">01</h3>
                 <div class="list-item-wrapper">
                   <p class="list-item-text">букет невесты и свадебное оформление</p>
-                  <button class="list-item-button">смотреть работы</button>
+                  <button class="list-item-button button-hidden">смотреть работы</button>
                 </div>
               </div>
             </li>
@@ -73,7 +74,7 @@
                 <h3 class="list-item-heading right">02</h3>
                 <div class="list-item-wrapper">
                   <p class="list-item-text">букеты на торжества</p>
-                  <button class="list-item-button">смотреть работы</button>
+                  <button class="list-item-button button-hidden">смотреть работы</button>
                 </div>
               </div>
             </li>
@@ -82,7 +83,7 @@
                 <h3 class="list-item-heading right">03</h3>
                 <div class="list-item-wrapper">
                   <p class="list-item-text">композиции</p>
-                  <button class="list-item-button">смотреть работы</button>
+                  <button class="list-item-button button-hidden">смотреть работы</button>
                 </div>
               </div>
             </li>
@@ -91,21 +92,15 @@
                 <h3 class="list-item-heading right">04</h3>
                 <div class="list-item-wrapper">
                   <p class="list-item-text">оформление мероприятий</p>
-                  <button class="list-item-button">смотреть работы</button>
+                  <button class="list-item-button button-hidden">смотреть работы</button>
                 </div>
               </div>
             </li>
           </ul>
-        </div>
-        <div class="inner-list-controls control-mobile">
-          <div class="control selected" data-number="0"></div>
-          <div class="control" data-number="1"></div>
-          <div class="control" data-number="2"></div>
-          <div class="control" data-number="3"></div>
-        </div>
-        <div class="inner-list-controls control-medium">
-          <div class="control selected" data-number="0"></div>
-          <div class="control" data-number="1"></div>
+        </div> -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-pagination"></div>  
         </div>
       </section>
       <section class="stock">
@@ -148,7 +143,10 @@
       </div>
     </div>
   </div>
+  <div class="tablet-visible"></div>
+  <div class="xl-visible"></div>
   <script src="./script.js"></script>
+  <script src="./main-slider.js"></script>
 </body>
 </html>
 

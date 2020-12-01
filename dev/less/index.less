@@ -6,6 +6,7 @@
 @import '../less/welcome.less';
 @import '../less/popup.less';
 @import '../less/variables.less';
+@import '../less//slider.less';
 
 html {
     scroll-behavior: smooth;
@@ -38,4 +39,29 @@ button:active {
     margin-top: 20px;
     padding: 0 15px;
     padding-bottom: 15px;
+}
+
+.swiper-container {
+    width: 800px;
+    height: 300px;
+}
+
+.tablet-visible {
+    display: none;
+}
+
+.xl-visible {
+    display: none;
+}
+
+@media (min-width: @medium) {
+    .tablet-visible {
+        display: block;
+    }
+}
+
+@media (min-width: @xl) {
+    .xl-visible {
+        display: block;
+    }
 }
