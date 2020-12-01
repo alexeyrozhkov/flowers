@@ -29,7 +29,7 @@
     background-color: white;
 }
 .catalog-inner {
-    width: 288px;
+    display: none;
     overflow: hidden;
 }
 .innner-lists {
@@ -39,6 +39,15 @@
     padding: 0;
     list-style: none;
     transition: all 0.5s ease;
+}
+.inner-list {
+    margin-right: 15px;
+}
+.inner-list:last-child {
+    margin: 0;
+}
+.inner-list:hover {
+    cursor: pointer;
 }
 .list-item {
     padding: 15px 20px;
@@ -205,9 +214,7 @@
         display: block;
         margin-bottom: 20px;
     }
-    .catalog-inner {
-        width: 680px;
-    }
+    
     .list-item {
         width: 330px;
         height: 450px
@@ -249,6 +256,7 @@
 
 @media (min-width:@xl) {
     .catalog-inner {
+        display: block;
         width: 1375px;
     }
     .underline {

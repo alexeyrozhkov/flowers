@@ -21,7 +21,8 @@ const burgerTitleHiddenClass = 'burger-title-hidden';
 const overlayOpenedClass = 'overlay--opened';
 const overlayClosedClass = 'overlay--closed';
 
-const catalogList = document.querySelectorAll('.inner-list');
+const catalogList = document.querySelectorAll('.list-item');
+console.log(catalogList);
 
 function overlayHidden() {
     overlay.classList.remove(overlayColoredOpenedClass);
