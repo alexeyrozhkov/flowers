@@ -85,16 +85,21 @@ function renderTabletAndDesktopSlides() {
     `
     sliderInner.innerHTML = slides;
 }
+
+function initSlider() {
+    const mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    })
+}
 if (isMobile) {
     renderMobileSlides();
+    initSlider();
 }
 if (isTabletOrDesktop) {
     renderTabletAndDesktopSlides();
+    initSlider();
 }
-var mySwiper = new Swiper('.swiper-container', {
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    }
-})

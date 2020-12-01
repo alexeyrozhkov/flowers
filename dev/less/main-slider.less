@@ -1,3 +1,5 @@
+@import "./variables.less";
+
 .main {
     .swiper-container {
         width: 100%;
@@ -32,5 +34,11 @@
         cursor: pointer;
         transform: scale(1.1);
         transition: all 0.5s ease;
+    }
+    
+    @media (min-width: @xl) {
+        .swiper-container {
+            display: none;
+        }
     }
 }
