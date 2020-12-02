@@ -1,0 +1,55 @@
+@import './variables.less';
+
+
+.portfolio-photos {
+    .swiper-container {
+        width: 100%;
+    }
+    .swiper-slide {
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+    }
+    .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+        content: '';
+    }
+    .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+        content: '';
+    }
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        left: -55px;
+        right: auto;
+    }
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        right: -35px;
+        left: auto;
+    }
+    .swiper-button-prev {
+        display: none;
+    }
+    .swiper-button-next {
+        display: none;
+    }
+    .swiper-button-next:focus,
+    .swiper-button-next:active {
+        outline: none;
+    }
+    .swiper-button-prev:focus,
+    .swiper-button-prev:active {
+        outline: none;
+    }
+
+    @media(min-width: @medium) {
+        .swiper-slide {
+            width: 145px;
+            height: 145px; 
+        }
+        .swiper-button-prev {
+            display: block;
+        }
+        .swiper-button-next {
+            display: block;
+        }
+    }
+}

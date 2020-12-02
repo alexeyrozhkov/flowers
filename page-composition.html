@@ -6,8 +6,10 @@
   <title>Композиции и шляпные коробки</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="build/css/main.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="overlay">
@@ -50,19 +52,21 @@
             </div>
             <div class="portfolio-wrapper">
                 <div class="portfolio-photos">
-                    <ul class="photos-lists" style="margin-left: 0;">
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/m2-d1.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/m2-d2.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/m2-d3.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/m2-d4.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/composition-5.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/composition-6.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/composition-7.jpg"></li>
-                        <li class="photos-list"><img class="photo-list-img" src="./assets/composition-8.jpg"></li>
-                    </ul> 
-                </div>
-                <button class="portfolio-button arrow-left" type="button"><img src="./assets/arrow-left.png"></button>
-                <button class="portfolio-button arrow-right" type="button"><img src="./assets/cross1.png"></button>  
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/m2-d1.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/m2-d2.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/m2-d3.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/m2-d4.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/composition-5.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/composition-6.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/composition-7.jpg"></div>
+                            <div class="swiper-slide"><img class="photo-list-img" src="./assets/composition-8.jpg"></div> 
+                        </div> 
+                    </div> 
+                    <div class="swiper-button-prev"><img src="./assets/arrow-left.png"></div>
+                    <div class="swiper-button-next"><img src="./assets/cross1.png"></div>
+                </div>    
             </div>
             <div class="link-profile">
                 <a class="link-profile-text">Больше фотографий в профиле</a>
@@ -102,5 +106,8 @@
         </div>
       </div>
     <script src="./script.js"></script>
+    <script src="page-slider.js"></script>
 </body>
 </html>
+
+
