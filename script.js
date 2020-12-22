@@ -21,8 +21,8 @@ const burgerTitleHiddenClass = 'burger-title-hidden';
 const overlayOpenedClass = 'overlay--opened';
 const overlayClosedClass = 'overlay--closed';
 
-const catalogList = document.querySelectorAll('.list-item');
-console.log(catalogList);
+
+
 
 function overlayHidden() {
     overlay.classList.remove(overlayColoredOpenedClass);
@@ -71,6 +71,26 @@ popup.onclick = function(e) {
     const isClosedButton = target.closest('.popup-closed');
     if( isClosedButton || isPopup) {
         popupHidden();
+    }
+}
+
+
+const catalogList = document.querySelectorAll('.list-item');
+
+for(let i=0; i<catalogList.length; i++) {
+    catalogList[i].onmouseenter = function() {
+        let buttonList = catalogList[i].querySelector('.list-item-button');
+        buttonList.classList.remove('button-hidden');
+        buttonList.classList.add('button--show');
+    }
+}
+
+for(let i=0; i<catalogList.length; i++) {
+    catalogList[i].onmouseleave = function(e) {
+        let target = e.target;
+        let buttonhHidden = target.querySelector('.list-item-button');
+        buttonhHidden.classList.remove('button--show');
+        buttonhHidden.classList.add('button-hidden');
     }
 }
 
