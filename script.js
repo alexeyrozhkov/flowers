@@ -74,16 +74,4 @@ popup.onclick = function(e) {
     }
 }
 
-for(let i=0; i > catalogList.length; i++) {
-    catalogList[i].onmouseover = function() {
-        let buttonList = catalogList[i].querySelector('.list-item-button');
-        buttonList.classList.add('button--show');
-        buttonList.classList.remove('button-hidden');
 
-    }
-    catalogList[i].onmouseout = function() {
-        let buttonList = catalogList[i].querySelector('.list-item-button');
-        buttonList.classList.remove('button--show');
-        buttonList.classList.add('button-hidden');
-    }
-}
